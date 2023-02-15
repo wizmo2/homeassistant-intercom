@@ -8,6 +8,8 @@ Intercom works by leveraging `MediaRecorder` to record using the device's microp
 
 Intercom leverages `media_player.play_media` within the browser provided by the [browser_mod](https://github.com/thomasloven/hass-browser_mod) integration by thomasloven. Make sure that is installed and configured prior installing this add-on.
 
+`MediaRecorder' is supported on newer browsers only, and typically requires a secure connection (https).  You can add SSL with [Nuba Casa](https://www.nabucasa.com/), [DuckDNS](https://www.home-assistant.io/integrations/duckdns/), or [manually using OpenSSL](https://community.home-assistant.io/t/certificate-authority-and-self-signed-certificate-for-ssl-tls/196970).
+
 ## Install
 
 ### input_select
