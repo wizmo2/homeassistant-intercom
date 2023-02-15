@@ -6,7 +6,7 @@ class IntercomCard extends HTMLElement {
         this._destination = "";
         this._error = "";
         this._intercoms = [];
-        this._myId = localStorage['lovelace-player-device-id'];
+        this._myId = localStorage['browser_mod-browser-id'];
         this._myName = "";
         this._options = [];
         this._size = 1;
@@ -285,9 +285,9 @@ class IntercomCard extends HTMLElement {
 
     _sendAudio(content) {
         this._hass.callService('browser_mod', 'popup', {
-            deviceID: this._destination,
+            browser_id: this._destination,
             title: 'Intercom',
-            card: {
+            content: {
                 type: 'custom:intercom-card',
                 response_to: this._myId,
                 auto_respond_delay: this._auto_respond_delay,
